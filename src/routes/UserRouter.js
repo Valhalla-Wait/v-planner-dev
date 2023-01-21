@@ -34,17 +34,17 @@ function UserRouter({token,userDto,loading,chat}) {
       >
         <Route path="/" element={<MainPageLayout />}>
           <Route path="/" element={<Navigate to="/matchlist" />} />
-          {/* <Route path="/matchlist" element={<Matchlist />}/> */}
-          {/* {Object.keys(auth.user.profile.likes.users).length >= 10 && (
-            <> */}
+          <Route path="/matchlist" element={<Matchlist />}/>
+          {Object.keys(auth.user.profile.likes.users).length >= 10 && (
+            <>
               <Route path="/quotes" element={<UserQuotes />} />
               <Route path="/orders" element={<UserOrders />} />
               <Route path="/vendor" element={<VendorList />} />
               <Route path="/vendor/:id" element={<VendorItem />} />
               <Route path="/chat" element={<UserChat />} />
               <Route path="/chat/:id" element={<UserChat />} />
-            {/* </>
-          )} */}
+            </>
+          )}
           <Route path="/about" element={<About />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/policy" element={<Policy />} />
